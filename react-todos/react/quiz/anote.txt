@@ -1,0 +1,29 @@
+tailwind 
+1-npm install -D tailwindcss postcss autoprefixer
+2-npx tailwindcss init -p
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}"
+  ],
+  theme: {
+    extend: {
+      fontFamily:{
+        sans:['Robot','sans-serif']
+      },
+      gridTemplateColumns:{
+        '70/30':'70% 28%'
+      }
+    },
+  },
+  plugins: [],
+}
+eslint extensao para erros
+---------------------------------------------------
+py = padding
+w = width
+bg-cor-concentracaoDaCor = background-color
+
+SITE PARA VER TODAS AS QUERIES DO CSS
+https://v1.tailwindcss.com/docs/margin

@@ -1,0 +1,60 @@
+{
+  "jobs": [
+    {
+      "id": "1",
+      "title": "senior react",
+      "type": "full time",
+      "description": "we are talent",
+      "location": "porto alegre",
+      "salary": "70k = 80k",
+      "company": {
+        "name": "new Tek solution",
+        "description": "tech solution é uma grande compania",
+        "contactEmail": "contact@companysolutions.com",
+        "contactPhone": "444-440-444"
+      }
+    },
+    {
+      "id": "2",
+      "title": "senior react",
+      "type": "full-time",
+      "description": "we are talent",
+      "location": "porto alegre",
+      "salary": "70k = 80k",
+      "company": {
+        "name": "new Tek solution",
+        "description": "tech solution é uma grande compania",
+        "contactEmail": "contact@companysolutions.com",
+        "contactPhone": "444-440-444"
+      }
+    },
+    {
+      "id": "bdd8",
+      "title": "prime empresarial",
+      "type": "",
+      "description": "fazer telemarketing",
+      "location": "enes bandeira",
+      "salary": "under 50k",
+      "company": {
+        "companyName": "prime",
+        "companyDescription": "terceiriza da vivo",
+        "contactEmail": "prime@gmail.com",
+        "contactPhone": "773733723"
+      }
+    },
+    {
+      "id": "eaf8",
+      "title": "callcenter",
+      "type": "remote",
+      "description": "fazer calcenter para as pessoas",
+      "location": "julio de castilhos",
+      "salary": "60k = 70k",
+      "company": {
+        "companyName": "renner",
+        "companyDescription": "reneer de modas",
+        "contactEmail": "09038038903",
+        "contactPhone": "393030308"
+      }
+    }
+  ]
+}

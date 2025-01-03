@@ -1,0 +1,189 @@
+o que é react ?
+framework do javascript 
+constroi interfaces frontend
+
+components são os proprios componentes do html fazem parte da arquitetura do site
+
+state são o data sao componentes internos
+
+------------------------------------
+
+Os Hooks no React são uma característica introduzida a partir da versão 16.8 que permitem que você use o estado e outros recursos do React em componentes funcionais, sem a necessidade de escrever uma classe. 
+
+começa sempre com use 
+useState() é para alterar os componentes de uma classe
+const [componentes,setAlterarComponente] = useState('')
+tem que usar o onChange={()=>{setAlterarComponente()}}
+
+useEfect()
+useRef() permite criar uma referência para um elemento DOM 
+useReducer()
+
+
+------------------------------------
+
+props no react sao quanto é o argumento de uma funcao que vira uma variavel 
+
+var app = ()=>{
+  return (
+    <Header cor="red">
+  )
+}
+var header = ({cor,outraCoisa = 'coisas'}) =>{
+  return (
+    <>
+    <h1 className="${cor}"><h1/>
+    </>
+  )
+}
+a funcao header com os {} ela nao age como um parametro imaginario ela tem dentro duas variaveis que posso chamar no app
+ou
+var app = ()=>{
+  return (
+  <Header titulo="titulo" subtitulo="titulo2">
+  )
+}
+var header = (titulos) =>{
+  return (
+    <>
+    <h1 className="${titulos.titulo}"><h1/>
+    <h1 className="${titulos.subtitulo}"><h1/>
+    </>
+  )
+}
+ 
+
+----------------------------------------
+
+
+ rotas
+
+ import {Route,createBrowerRouter,createRoutesFromElement,Router} from 'react-router-dom'
+ const router = createBrowerRouter(
+  createRoutesFromElement(<Router path="/about' element={<h1><h1/>}/>)
+ )
+ const app = () => {
+  return <RouteProvide router={router}/> recebeu a rota
+ }
+  as rotas sao em camadas
+  LEMBRANDO ISSO TUDO NO.EJS PRINCIPAL: QUE NO CASO É APP.EJS
+   const router = createBrowerRouter(
+  createRoutesFromElement(
+    <Route path="/" element={<Main />}/>)
+    <Route path="/home" element={<Home />}
+    <Route path="/jobs" element={<jobs />}
+    <Route>
+ )
+ depois importar nas paginas de rota os links de rota import  com {Link} from 'react-router-dom'
+ depois substituir todos os links com a tag <a/> para <Link href="/home">
+
+
+
+----------------------------------
+json server
+
+para conseguir fazer requisições com react 
+
+npm i -D install json server
+colocar no packege json "server":"json--server --watch src/jobs.json --port 8000"
+
+jobs seria a api 
+
+consy [jobs,setjobs] = useState([])
+const [loading,setLoading] = useState()
+
+useEfect(()=>{
+  const fetchJobs = async () => {
+    try{
+    const res = awat fetch('http://localhost/:8000/jobs')
+    const data = await res.json()
+    }
+    catch(err){
+console.log( )
+    }
+  }finally{
+    setLoading(false)
+  }
+fetchJobs()
+<> return( <div {loading?(<h2>carregando...<h2/>:{jobs.map(job)=>(<JOblisting key={job.id} job={job}/>)})}><div/>) </> 
+})
+
+
+--------------------------------------------------
+
+como colocar uma proxy?
+proxy serviço intermediario com o servidor e o cliente
+
+vite 
+proxy:'/api':{
+  target:'https//:localhost:8000',
+  changeOrigin:true,
+  rewrite : (path) => path.replace(/^\/api/,'')
+}''
+
+
+---------------------------------
+
+exportar duas coisas ao mesmo tempo
+export {primeiro as default, outro}
+
+--------------------------
+existem 3 maneiras de costruir websites com react
+spa,ssr e ssg
+spa:singles page app :carrega um unico html file and javascript loads the entire ui including routes
+
+sever-side-rendered:server send fully renderes page to client , I can fetch data and loads it as well
+
+static-site-generation : react generate static html files at build time , these are very fast
+
+---------------------------
+
+vite 
+iniciar o react
+---------------------------
+
+novo site para pegar toda documentação
+https://react.dev/
+
+
+--------------------------
+
+passos de criacao de um react
+
+1- npm create vite@latest react-crash-2024
+ou
+npx create-react-app
+
+2- viteconfig.js 
+ server:{
+    port:3000,
+  },
+
+ 3- npm install (node modules)
+
+ 4-npm run dev
+
+ tutorial : https://www.youtube.com/watch?v=LDB4uaJ87e0
+
+ -------------------------------
+
+ app.jsx apagar tudo 
+
+ rafce cria um html react
+
+ ----------------------------------
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+colocar no tailwind.config
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
